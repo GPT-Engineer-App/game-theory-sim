@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, Input, Button, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Input, Button, VStack, useBreakpointValue, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { FaPlay } from 'react-icons/fa';
 
 const Index = () => {
@@ -14,7 +14,17 @@ const Index = () => {
         <Flex justify="space-between" align="center" maxW="1200px" m="0 auto">
           <Heading size="lg" color="white">Game Theory Simulator</Heading>
           <Flex>
-            <Button colorScheme="teal" mr={2}>Concepts</Button>
+            <Menu>
+              <MenuButton as={Button} colorScheme="teal" mr={2}>
+                Concepts
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Introduction to Game Theory</MenuItem>
+                <MenuItem>Nash Equilibrium</MenuItem>
+                <MenuItem>Prisoner's Dilemma</MenuItem>
+                <MenuItem>Zero-sum Games</MenuItem>
+              </MenuList>
+            </Menu>
             <Button colorScheme="teal">Simulations</Button>
           </Flex>
         </Flex>
